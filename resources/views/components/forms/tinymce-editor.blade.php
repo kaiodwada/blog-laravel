@@ -1,14 +1,15 @@
-<section class="container mx-auto mt-5 py-20 w-10/12 ">
+<section class="" style="width: 750px">
+
     <form action="{{ route('create-post') }}" class="text-gray-900" method="GET">
         @csrf
         <textarea name="postBlog" id="postBlog">
         Welcome to TinyMCE!
     </textarea>
-    <section>
-            <button type="submit" class="p-3 mt-3 bg-indigo-600 rounded-md text-gray-200 hover:bg-indigo-400 hover:text-gray-900">Create Post</button>
+
+    <section class="flex items-center justify-center">
+        <button
+        class="flex items-center justify-center p-3 mt-2 w-40 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">Create Post</button>
     </section>
-
-
     </form>
 
 </section>
