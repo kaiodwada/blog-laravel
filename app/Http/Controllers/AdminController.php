@@ -16,9 +16,19 @@ class AdminController extends Controller
         return view('categories');
     }
 
+    public function createPost()
+    {
+        return view('dashboard.create-post');
+    }
+
     public function knowledge()
     {
         return view('dashboard.knowledge');
+    }
+
+    public function createEditor()
+    {
+        return view('dashboard.create-editors');
     }
 
     public function editors()

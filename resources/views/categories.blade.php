@@ -3,7 +3,7 @@
 @section('title-adm', 'Categorias')
 
 @section('content-dashboard')
-    <section class="container  flex items-center ml-80 justify-start py-20 border-b-2 border-gray-400">
+    <section class="container flex items-center ml-80 justify-start py-20 border-b-2 border-gray-400">
         <div class="space-y-4">
             <h1 class="text-2xl text-gray-700 font-semibold">Adicionar categorias</h1>
             <form action="" class="">

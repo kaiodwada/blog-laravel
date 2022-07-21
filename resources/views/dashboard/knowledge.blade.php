@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 
-@section('title-adm', 'Knowledge Poster')
+@section('title-adm', 'Todos os posts')
 
 @section('content-dashboard')
 
-<section class="flex items-center justify-center h-screen container mx-auto" style="width: 790px">
-    <x-forms.tinymce-editor/>
+<section class="container flex items-center ml-80 justify-start py-20">
+    <h1>Olá mundo!</h1>
 </section>
 
 @endsection
