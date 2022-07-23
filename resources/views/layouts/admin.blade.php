@@ -17,16 +17,19 @@
         <section
             class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000
         p-2 w-[300px] overflow-y-auto text-center bg-gray-900 shadow h-screen">
-            <div class="text-gray-100 text-xl">
-                <div class="p-2.5 mt-1 flex items-center rounded-md ">
+            <div class="text-gray-100 text-base space-y-2">
+                <div class="p-2.5 mt-1 flex items-center rounded-md justify-center">
+                    <div class="rounded-full w-40 h-40 bg-gray-400">
 
-                    <h1 class="text-[15px]  ml-3 text-xl text-gray-200 font-bold">My-blog</h1>
-
+                    </div>
+                </div>
+                <div>
+                    Nome do editor
+                </div>
+                <div>
+                    editor@email.com
                 </div>
                 <hr class="my-2 text-gray-600">
-
-
-
 
                 <a href="{{ route('home-dashboard') }}"
                     class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
@@ -124,7 +127,7 @@
                     </div>
                 </section>
 
-                <div class=" leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto" id="submenu">
+                <div class="leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto" id="submenu">
                     <a href="{{ route('create-post') }}"
                         class="flex items-center cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">
                         <h1 class="mr-1">Knowledge poster</h1>
@@ -171,7 +174,7 @@
 
 
 
-    <main>
+    <main class="">
         @yield('content-dashboard')
     </main>
 
