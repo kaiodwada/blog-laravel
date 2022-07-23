@@ -16,13 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/create-post', [PostController::class, 'store'])->name('create-post');
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/post/id', [PostController::class, 'viewPost'])->name('post');
-Route::get('/admin/categories', [AdminController::class, 'categories'])->name('categories');
-Route::get('/admin/home', [AdminController::class, 'index'])->name('home-dashboard');
-Route::get('/admin/create-post', [AdminController::class, 'createPost'])->name('create-post');
-Route::get('/admin/knowledge', [AdminController::class, 'knowledge'])->name('knowledge');
-Route::get('/admin/create-editor', [AdminController::class, 'createEditor'])->name('create-editor');
-Route::get('/admin/editors', [AdminController::class, 'editors'])->name('editors');
+
+
+Route::prefix('dashboard')->group(function () {
+    Route::get('/home', [AdminController::class, 'index'])->name('home-dashboard');
+    Route::get('/categories', [AdminController::class, 'categories'])->name('categories');
+    Route::get('/create-post', [AdminController::class, 'createPost'])->name('create-post');
+    Route::get('/knowledge', [AdminController::class, 'knowledge'])->name('knowledge');
+    Route::get('/create-editor', [AdminController::class, 'createEditor'])->name('create-editor');
+    Route::get('/editors', [AdminController::class, 'editors'])->name('editors');
+});
+
