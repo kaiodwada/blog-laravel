@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/create-post', [PostController::class, 'store'])->name('create-post');
 Route::get('/post/id', [PostController::class, 'viewPost'])->name('post');
-
+Route::get('/login', [HomeController::class, 'login'])->name('login');
 
 Route::prefix('dashboard')->group(function () {
     Route::get('/home', [AdminController::class, 'index'])->name('home-dashboard');
