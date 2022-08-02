@@ -5,7 +5,7 @@
         selector: 'textarea#postBlog',
         statusbar: false,
         entity_encoding: "raw",
-        plugins: 'code a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents  nonbreaking tinymcespellchecker emoticons codeformat',
+        plugins: 'code  autolink lists  media table   nonbreaking  emoticons codeformat',
         menubar: 'editor',
         toolbar: 'undo redo | styleselect | blocks| codeformat | alignleft aligncenter alignright alignjustify | ' +
             'bullist numlist outdent indent | emoticons | image preview media fullscreen | bold italic underline strikethrough superscript subscript codeformat | styles fontfamily fontsize align lineheight | forecolor backcolor | language | removeformat ',
