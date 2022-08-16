@@ -6,9 +6,9 @@
     <section class="container flex items-center ml-80 justify-start py-20 border-b-2 border-gray-400">
         <div class="space-y-4">
             <h1 class="text-2xl text-gray-700 font-semibold">Adicionar categorias</h1>
-            <form action="" class="">
+            <form action="{{ route('store-category') }}">
                 <div class="mb-2">
-                    <input id="email" name="email" type="email" placeholder="Categoria"
+                    <input id="category" name="category" type="text" placeholder="Nome da Categoria"
                         class="w-full rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200"
                         autocomplete="off">
                 </div>
@@ -16,8 +16,8 @@
                 <div>
                     <select name="status" id="status"
                         class="p-2 w-full bg-gray-100 text-gray-600 border-gray shadow-md rounded-md m-1">
-                        <option value="">Ativo</option>
-                        <option value="">Inativo</option>
+                        <option value="1">Ativo</option>
+                        <option value="0">Inativo</option>
                     </select>
                 </div>
                 <div>

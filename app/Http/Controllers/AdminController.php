@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -13,7 +14,16 @@ class AdminController extends Controller
 
     public function categories()
     {
-        return view('categories');
+        return view('dashboard.categories');
+    }
+
+    public function storeCategory(Request $request)
+    {
+        $input = ['name' => 'teste3', 'status' => '1'];
+
+       Category::create($input);
+
+      return redirect()->route('categories');
     }
 
     public function createPost()
