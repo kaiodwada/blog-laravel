@@ -7,7 +7,7 @@
 <section class="container flex items-center ml-80 justify-start py-20 border-b-2">
     <div class="space-y-4">
         <h1 class="text-3xl text-gray-700 font-bold">Adicione um novo editor</h1>
-        <form action="{{ route('editors-store') }}" method="POST" class="space-y-4">
+        <form enctype="multipart/form-data" action="{{ route('editors-store') }}" method="POST" class="space-y-4">
             @csrf
             <div>
                 <input name="name" id="name" type="text" value="{{ old('name') }}" placeholder="Adicione o nome" autocomplete="off" class="w-full rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200" >
@@ -90,12 +90,23 @@
 
     <div>
         <h1 class="text-center text-3xl font-bold text-gray-700">Preview</h1>
-        <div class="w-80 h-80  mx-20 rounded-md bg-gray-400">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-80 w-80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
+        <div class="flex w-70 h-70 p-2  mx-20 rounded-md bg-gray-400 justify-center align-center">
+            <img id="imgPreview" src="{{ Storage::url('default/m-1.png') }}">
         </div>
     </div>
 </section>
+
+<script>
+    let imagem = document.querySelector('[name=image]')
+    imagem.addEventListener('change', e => {
+        let file = e.target.files[0]
+        let fileReader = new FileReader()
+        fileReader.onloadend = () =>{
+            document.querySelector('#imgPreview').setAttribute('src', fileReader.result)
+        }
+        fileReader.readAsDataURL(file)
+    })
+
+</script>
 
 @endsection

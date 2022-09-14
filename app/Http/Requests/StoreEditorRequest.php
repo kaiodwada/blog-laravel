@@ -15,6 +15,13 @@ class StoreEditorRequest extends FormRequest
     {
         return true;
     }
+    /**'name' =>  'required|string',
+        'age' =>  'required|date',
+        'email' =>  'required|email',
+        'password' =>  'required|min:8',
+        'gender' =>  'required|string',
+        'level' => 'required|integer',
+        'status' => 'required|boolean', */
 
     /**
      * Get the validation rules that apply to the request.
@@ -23,15 +30,16 @@ class StoreEditorRequest extends FormRequest
      */
     public function rules()
     {
+
         return [
-        'name' =>  'required|string',
-        'age' =>  'required|date',
-        'email' =>  'required|email',
-        'password' =>  'required|size:8',
-        'gender' =>  'required|string',
-        'level' => 'required|integer',
-        'status' => 'required|boolean',
-        'image' =>  'file|nullable'
+            'name' =>  'required|string',
+            'age' =>  'required|date',
+            'email' =>  'required|email',
+            'password' =>  'required|min:8',
+            'gender' =>  'required|string',
+            'level' => 'required|integer',
+            'status' => 'required|boolean',
+            'image' =>  'file|nullable'
         ];
     }
 }

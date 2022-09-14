@@ -23,7 +23,6 @@
                             <td class="p-2">
                                 {{ $editor->name }}
                             </td>
-
                             <td class="p-2">
                                 {{ $editor->email }}
                             </td>
