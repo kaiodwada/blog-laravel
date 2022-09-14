@@ -16,4 +16,14 @@ class PostController extends Controller
     $input = $request;
     dd($input);
    }
+
+   public function createPost()
+   {
+       return view('dashboard.create-post');
+   }
+
+   public function knowledge()
+   {
+       return view('dashboard.knowledge');
+   }
 }

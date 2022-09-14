@@ -31,6 +31,18 @@
                                 class="p-1 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Arquivar</button>
                         </td>
                     </tr>
+
+                    <tr class="border-b border-gray-300">
+                        <td class="p-2">
+                            Post2
+                        </td>
+                        <td class="p-2">
+                            <button
+                                class="p-1 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Editar</button>
+                            <button
+                                class="p-1 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Publicar</button>
+                        </td>
+                    </tr>
                 </tbody>
 
             </table>

@@ -16,12 +16,13 @@ class CreateEditorsTable extends Migration
         Schema::create('editors', function (Blueprint $table) {
             $table->id();
             $table->string('name', 35);
-            $table->integer('age');
+            $table->date('age');
             $table->string('email', 100);
             $table->string('password', 100);
             $table->string('gender', 20);
-            $table->text('file');
-            $table->tinyInteger('status');
+            $table->integer('level');
+            $table->string('image', 255)->nullable();
+            $table->boolean('status');
             $table->timestamps();
         });
     }

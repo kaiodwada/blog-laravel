@@ -3,6 +3,9 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EditorController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,12 +27,15 @@ Route::get('/login', [HomeController::class, 'login'])->name('login');
 Route::prefix('dashboard')->group(function () {
     Route::get('/home', [AdminController::class, 'index'])->name('home-dashboard');
 
-    Route::get('/categories', [AdminController::class, 'categories'])->name('categories');
-    Route::get('/store-category', [AdminController::class, 'storeCategory'])->name('store-category');
+    Route::get('/categories', [CategoryController::class, 'categories'])->name('categories');
+    Route::post('/store', [CategoryController::class, 'store'])->name('store-category');
 
-    Route::get('/create-post', [AdminController::class, 'createPost'])->name('create-post');
-    Route::get('/knowledge', [AdminController::class, 'knowledge'])->name('knowledge');
-    Route::get('/create-editor', [AdminController::class, 'createEditor'])->name('create-editor');
-    Route::get('/editors', [AdminController::class, 'editors'])->name('editors');
+    Route::get('/create-post', [PostController::class, 'createPost'])->name('create-post');
+    Route::get('/knowledge', [PostController::class, 'knowledge'])->name('knowledge');
+
+    Route::get('/editors', [EditorController::class, 'index'])->name('editors-index');
+    Route::get('/editors/create', [EditorController::class, 'create'])->name('editors-create');
+    Route::post('/editors', [EditorController::class, 'store'])->name('editors-store');
+    Route::put('/editors/{id}/edit', [EditorController::class, 'edit'])->name('editors-edit');
 });
 
