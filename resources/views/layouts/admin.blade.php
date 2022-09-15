@@ -192,6 +192,8 @@
         dropDown()
         dropDownEditors()
     </script>
+    <script src="{{ mix('/js/flowbite.js') }}"></script>
+
 </body>
 
 </html>

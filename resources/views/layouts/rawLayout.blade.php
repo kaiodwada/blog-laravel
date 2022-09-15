@@ -9,5 +9,7 @@
 </head>
 <body>
     @yield('raw-content')
+
 </body>
+
 </html>

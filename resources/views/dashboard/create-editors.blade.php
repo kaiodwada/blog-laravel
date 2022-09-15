@@ -43,7 +43,7 @@
                     <option value="" selected>Selecione o gênero</option>
                     <option value="masculino">Masculino</option>
                     <option value="feminino">Feminino</option>
-                    <option value="nao-binario">Não binário</option>
+                    <option value="não-binário">Não binário</option>
                 </select>
 
             @error('gender')
@@ -91,7 +91,7 @@
     <div>
         <h1 class="text-center text-3xl font-bold text-gray-700">Preview</h1>
         <div class="flex w-70 h-70 p-2  mx-20 rounded-md bg-gray-400 justify-center align-center">
-            <img id="imgPreview" src="{{ Storage::url('default/m-1.png') }}">
+            <img id="imgPreview" src="{{ Storage::url('default/default.png') }}">
         </div>
     </div>
 </section>

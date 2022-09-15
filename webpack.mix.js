@@ -16,3 +16,4 @@ mix.js('resources/js/app.js', 'public/js')
     require("tailwindcss"),
 ]);
 mix.copyDirectory('vendor/tinymce/tinymce', 'public/js/tinymce');
+mix.js('node_modules/flowbite/dist/flowbite.js','public/js/flowbite.js');

@@ -29,10 +29,9 @@
                     </select>
                 </div>
                 <div>
-                    <button
-                    type="submit"
-                    class="flex items-center justify-center p-2 mt-2 ml-2 w-28 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">
-                    Adicionar</button>
+                    <button type="submit"
+                        class="flex items-center justify-center p-2 mt-2 ml-2 w-28 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">
+                        Adicionar</button>
                 </div>
             </form>
         </div>
@@ -59,28 +58,28 @@
                 <tbody>
                     @foreach ($categories as $category)
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <td class="py-1 px-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            {{$category->name}}
-                        </td>
-                        <td class="py-1 px-4">
-                            {{$category->status}}
-                        </td>
-                        <td class="py-1 px-4">
-                            @if ($category->status === 0)
-                                 <button class="text-indigo-400">Ativar</button>
-                                 @else
-                                     <button class="text-indigo-400">Desativar</button>
-                            @endif
+                            <td class="py-1 px-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {{ $category->name }}
+                            </td>
+                            <td class="py-1 px-4">
+                                {{ $category->status }}
+                            </td>
+                            <td class="py-1 px-4">
+                                @if ($category->status === 0)
+                                    <button class="text-indigo-400">Ativar</button>
+                                @else
+                                    <button class="text-indigo-400">Desativar</button>
+                                @endif
 
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
 
             <div>
-                <ul class="items-center justify-center  p-2 bg-gray-600  text-white rounded-b-md">
-                   {{ $categories->links() }}
+                <ul class="items-center justify-center  p-2 bg-gray-400  text-white rounded-b-md">
+                    {{ $categories->links() }}
                 </ul>
             </div>
         </div>

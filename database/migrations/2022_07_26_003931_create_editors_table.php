@@ -15,7 +15,7 @@ class CreateEditorsTable extends Migration
     {
         Schema::create('editors', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 35);
+            $table->string('name', 255);
             $table->date('age');
             $table->string('email', 100);
             $table->string('password', 100);

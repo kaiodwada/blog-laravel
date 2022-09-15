@@ -5,14 +5,15 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreEditorRequest;
 use App\Models\Editor;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
+
 
 class EditorController extends Controller
 {
 
     public function index()
     {
-        $editor = Editor::paginate();
+        $editor = Editor::paginate(10);
         return view('dashboard.editors', [
             'editors' => $editor
         ]);
@@ -55,5 +56,10 @@ class EditorController extends Controller
     public function edit()
     {
 
+    }
+
+    public function status(Request $request)
+    {
+        dd($request->request);
     }
 }
