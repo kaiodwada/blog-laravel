@@ -10,7 +10,8 @@
         <form enctype="multipart/form-data" action="{{ route('editors-store') }}" method="POST" class="space-y-4">
             @csrf
             <div>
-                <input name="name" id="name" type="text" value="{{ old('name') }}" placeholder="Adicione o nome" autocomplete="off" class="w-full rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200" >
+                <input name="name" id="name" type="text" value="{{ old('name') }}" placeholder="Adicione o nome" autocomplete="off" class="border-gray-300 text-gray-900 text-sm rounded-lg  focus:border-blue-500  w-full
+                shadow-md border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none transition ease-in-out duration-200" >
 
             @error('name')
                 <div class="bg-red-800 text-gray-50 rounded-md px-1 mx-3">{{ $message }}</div>
@@ -18,28 +19,31 @@
             </div>
             <div>
                 {{-- <label for="age" class="text-lg text-gray-700 text-center font-semibold"><h2>Adicione uma idade para o editor</h2></label> --}}
-                <input name="age" id="age" type="date" value="{{ old('age') }}" placeholder="Adicione a idade" autocomplete="off" class="w-full rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200" >
+                <input name="age" id="age" type="date" value="{{ old('age') }}" placeholder="Adicione a idade" autocomplete="off" class="border-gray-300 text-gray-900 text-sm rounded-lg  focus:border-blue-500  w-full
+                shadow-md border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none transition ease-in-out duration-200" >
 
             @error('age')
                 <div class="bg-red-800 text-gray-50 rounded-md px-1 mx-3">{{ $message }}</div>
             @enderror
             </div>
             <div>
-                <input name="email" id="email" type="text" value="{{ old('email') }}" placeholder="Adicione o email" autocomplete="off" class="w-full rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200" >
+                <input name="email" id="email" type="text" value="{{ old('email') }}" placeholder="Adicione o email" autocomplete="off" class="border-gray-300 text-gray-900 text-sm rounded-lg  focus:border-blue-500  w-full
+                shadow-md border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none transition ease-in-out duration-200" >
 
             @error('email')
                 <div class="bg-red-800 text-gray-50 rounded-md px-1 mx-3">{{ $message }}</div>
             @enderror
             </div>
             <div>
-                <input name="password" id="password" type="password" placeholder="Adicione a senha" autocomplete="off" class="w-full rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200" >
+                <input name="password" id="password" type="password" placeholder="Adicione a senha" autocomplete="off" class="w-full border-gray-300 text-gray-900 text-sm rounded-lg  focus:border-blue-500
+                shadow-md border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none transition ease-in-out duration-200" >
 
             @error('password')
                 <div class="bg-red-800 text-gray-50 rounded-md px-1 mx-3">{{ $message }}</div>
             @enderror
             </div>
             <div>
-                <select name="gender" id="gender" class="w-full text-gray-700 rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200">
+                <select name="gender" id="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                     <option value="" selected>Selecione o gênero</option>
                     <option value="masculino">Masculino</option>
                     <option value="feminino">Feminino</option>
@@ -51,7 +55,7 @@
             @enderror
             </div>
             <div>
-                <select name="level" id="level" class="w-full text-gray-700 rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200">
+                <select name="level" id="level" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                     <option value="" selected>Selecione o nível de acesso</option>
                     <option value="4">Editor</option>
                     <option value="3">Gerente</option>
@@ -64,7 +68,7 @@
             </div>
 
             <div>
-                <select name="status" id="status" class="w-full text-gray-700 rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200">
+                <select name="status" id="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                     <option value="" selected>Selecione o status</option>
                     <option value="1">Ativo</option>
                     <option value="0">Inativo</option>
@@ -75,7 +79,7 @@
             </div>
             <div>
                 <label for="image" class="text-lg text-gray-700 text-center font-semibold"><h2>Adicione uma foto para o  editor</h2></label>
-                <input name="image" id="image" type="file" class="w-full rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200">
+                <input name="image" id="image" type="file" class="mt-2 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer focus:outline-none">
 
             @error('image')
                 <div class="bg-red-800 text-gray-50 rounded-md px-1 mx-3">{{ $message }}</div>
