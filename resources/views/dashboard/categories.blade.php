@@ -6,7 +6,7 @@
     <section class="container flex items-center ml-80 justify-start py-20">
         <div class="space-y-4">
             <h1 class="text-2xl text-gray-700 font-semibold">Adicionar categorias</h1>
-            <form action="{{ route('store-category') }}" method="POST">
+            <form action="{{ route('category-store') }}" method="POST">
                 @csrf
                 <div class="mb-2">
                     <input id="name" name="name" type="text" placeholder="Nome da Categoria"
@@ -17,7 +17,6 @@
                     @error('name')
                         <div class="bg-red-800 text-gray-50 rounded-md px-1 mx-3">{{ $message }}</div>
                     @enderror
-
 
                 </div>
 
@@ -37,9 +36,10 @@
         </div>
 
     </section>
-
-    <div class="container flex items-center justify-center -ml-28 py-15  w-screen ">
-        <div class="overflow-x-auto relative rounded-lg">
+    <hr>
+    <section class="container flex items-center ml-80 justify-start py-10">
+        <div class="rounded-lg">
+            <p class="text-2xl text-gray-700 font-semibold p-3">Categorias cadastradas</p>
             <table class="w-full text-sm text-left  text-gray-400">
                 <thead class="text-xs  uppercase  bg-gray-700 text-gray-400">
                     <tr>
@@ -53,31 +53,43 @@
                     </tr>
                 </thead>
 
+
                 <tbody>
                     @foreach ($categories as $category)
-                        <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
-                            <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap text-white">
-                                {{ $category->name }}
-                            </th>
-                            <td class="py-4 px-6">
-                                @if ($category->status === 0)
-                                    <button class="text-indigo-400 p-1 rounded-md hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">Ativar</button>
-                                @else
-                                    <button class="text-indigo-400 p-1 rounded-md hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">Desativar</button>
-                                @endif
+                        <form action="{{ route('category-changeStatus', $category->id) }}" method="POST">
+                            @csrf
+                            @method('put')
+                            <input type="text" name="name" value="{{ $category->name }}" readonly hidden>
+                            <input type="number" name="status" value="{{ $category->status }}" readonly hidden>
+                            <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
+                                <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap text-white">
+                                    {{ $category->name }}
+                                </th>
+                                <td class="py-4 px-6">
+                                    @if ($category->status === 0)
+                                        <button type="submit"
+                                            class="text-indigo-400 p-1 rounded-md hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">Ativar</button>
+                                    @else
+                                        <button type="submit"
+                                            class="text-indigo-400 p-1 rounded-md hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">Desativar</button>
+                                    @endif
 
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                        </form>
                     @endforeach
                 </tbody>
+
             </table>
 
-            <div>
-                <ul class="">
-                    {{ $categories->links() }}
+            <div >
+                <ul class="bg-gray-500 text-gray-50 p-2 rounded-b-md">
+                    {{$categories->links()}}
                 </ul>
             </div>
         </div>
+    </section>
 
-    </div>
+
+
 @endsection

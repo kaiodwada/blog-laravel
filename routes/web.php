@@ -27,11 +27,13 @@ Route::get('/login', [HomeController::class, 'login'])->name('login');
 Route::prefix('dashboard')->group(function () {
     Route::get('/home', [AdminController::class, 'index'])->name('home-dashboard');
 
-    Route::get('/categories', [CategoryController::class, 'categories'])->name('categories');
-    Route::post('/store', [CategoryController::class, 'store'])->name('store-category');
+    Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
+    Route::post('/category/store', [CategoryController::class, 'store'])->name('category-store');
+    Route::put('/categories/{category}/edit', [CategoryController::class, 'changeStatus'])->name('category-changeStatus');
 
-    Route::get('/create-post', [PostController::class, 'createPost'])->name('create-post');
-    Route::get('/knowledge', [PostController::class, 'knowledge'])->name('knowledge');
+    Route::get('/knowledge', [PostController::class, 'index'])->name('knowledge-index');
+    Route::get('/knowledge/create', [PostController::class, 'create'])->name('create-post');
+    Route::post('/knowledge', [PostController::class, 'store'])->name('knowledge-store');
 
     Route::get('/editors', [EditorController::class, 'index'])->name('editors-index');
     Route::get('/editors/create', [EditorController::class, 'create'])->name('editors-create');

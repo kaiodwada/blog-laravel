@@ -2,28 +2,35 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Post;
+use App\Http\Requests\StorePostRequest;
 
 class PostController extends Controller
 {
-    public function viewPost()
+    public function index()
     {
-        return view('view-post');
+        return view('dashboard.knowledge');
     }
 
-   public function store(Request $request)
+   public function store(StorePostRequest $request)
    {
-    $input = $request;
-    dd($input);
+    $input = $request->validated();
+    Post::create($input);
+    return redirect()->route('create-post');
    }
 
-   public function createPost()
+   public function create()
    {
-       return view('dashboard.create-post');
+        $categories = Category::all();
+
+       return view('dashboard.create-post',
+       ['categories' => $categories]);
    }
 
-   public function knowledge()
+   public function delete()
    {
-       return view('dashboard.knowledge');
+
    }
+
 }

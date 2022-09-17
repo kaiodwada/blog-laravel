@@ -136,7 +136,7 @@
                                 d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </a>
-                    <a href="{{ route('knowledge') }}"
+                    <a href="{{ route('knowledge-index') }}"
                         class="flex items-center cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">
                         <h1 class="mr-1">Knowledge center</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"

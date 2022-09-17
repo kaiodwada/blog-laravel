@@ -2,7 +2,7 @@
     referrerpolicy="origin"></script>
 <script>
     tinymce.init({
-        selector: 'textarea#postBlog',
+        selector: 'textarea#content',
         statusbar: false,
         entity_encoding: "raw",
         plugins: 'code  autolink lists  media table   nonbreaking  emoticons codeformat',
