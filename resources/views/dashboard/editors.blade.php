@@ -149,17 +149,25 @@
                                     {{ $editor->email }}
                                 </td>
                                 <td class="py-4 px-6">
-                                    {{ $editor->level }}
+                                    @if ($editor->level === 4)
+                                        Editor
+                                    @elseif ($editor->level === 3)
+                                        Gerente
+                                    @elseif ($editor->level === 2)
+                                        Aprovador
+                                    @elseif($editor->level === 1)
+                                        Administrador
+                                    @endif
                                 </td>
                                 <td class="py-4 px-6">
                                     <button data-modal-toggle="attrModal"
-                                        class="p-1 border border-gray-800 font-semibold  rounded-lg text-gray-100 hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Atribuições</button>
+                                        class="p-1  font-semibold  rounded-lg text-gray-100 hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Atribuições</button>
                                     @if ($editor->status === 0)
                                         <button data-modal-toggle="statusModal"
-                                            class="p-1 border border-gray-800 font-semibold  rounded-lg text-gray-100 hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Ativar</button>
+                                            class="p-1  font-semibold  rounded-lg text-gray-100 hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Ativar</button>
                                     @else
                                         <button data-modal-toggle="statusModal"
-                                            class="p-1 border border-gray-800 font-semibold  rounded-lg text-gray-100 hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Desativar</button>
+                                            class="p-1  font-semibold  rounded-lg text-gray-100 hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Desativar</button>
                                     @endif
                                 </td>
                             </tr>

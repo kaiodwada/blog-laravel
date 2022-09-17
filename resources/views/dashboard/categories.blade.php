@@ -30,7 +30,7 @@
                 </div>
                 <div>
                     <button type="submit"
-                        class="flex items-center justify-center p-2 mt-2 ml-2 w-28 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">
+                        class="flex items-center justify-center p-2 mt-2 ml-2 w-28 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-800 hover:text-gray-50 transition ease-in-out duration-300">
                         Adicionar</button>
                 </div>
             </form>
@@ -46,9 +46,7 @@
                         <th class="py-3 px-6">
                             Categoria
                         </th>
-                        <th class="py-3 px-6">
-                            Status
-                        </th>
+
                         <th class="py-3 px-6">
                             Operações
                         </th>
@@ -62,13 +60,10 @@
                                 {{ $category->name }}
                             </th>
                             <td class="py-4 px-6">
-                                {{ $category->status }}
-                            </td>
-                            <td class="py-4 px-6">
                                 @if ($category->status === 0)
-                                    <button class="text-indigo-400">Ativar</button>
+                                    <button class="text-indigo-400 p-1 rounded-md hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">Ativar</button>
                                 @else
-                                    <button class="text-indigo-400">Desativar</button>
+                                    <button class="text-indigo-400 p-1 rounded-md hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">Desativar</button>
                                 @endif
 
                             </td>

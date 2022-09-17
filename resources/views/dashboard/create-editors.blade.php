@@ -79,7 +79,7 @@
             </div>
             <div>
                 <label for="image" class="text-lg text-gray-700 text-center font-semibold"><h2>Adicione uma foto para o  editor</h2></label>
-                <input name="image" id="image" type="file" class="mt-2 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer focus:outline-none">
+                <input name="image" id="image" type="file" class="mt-2 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:outline-none">
 
             @error('image')
                 <div class="bg-red-800 text-gray-50 rounded-md px-1 mx-3">{{ $message }}</div>
@@ -87,7 +87,7 @@
             </div>
 
             <div class="flex justify-center">
-                <button type="submit" class="flex items-center justify-center p-3 mt-2 w-40 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">Cadastrar</button>
+                <button type="submit" class="flex items-center justify-center p-3 mt-2 w-40 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-800 hover:text-gray-50 transition ease-in-out duration-300">Cadastrar</button>
             </div>
         </form>
     </div>

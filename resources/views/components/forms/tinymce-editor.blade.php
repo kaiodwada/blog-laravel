@@ -20,17 +20,17 @@
         </div>
 
         @csrf
-        <textarea name="postBlog" id="postBlog">
+        {{-- <textarea name="postBlog" id="postBlog">
         Welcome to TinyMCE!
-    </textarea>
+        </textarea> --}}
 
         <section class="flex items-center justify-center space-x-2">
             <button
-                class="flex items-center justify-center p-3 mt-2 w-40 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">Create
+                class="flex items-center justify-center p-3 mt-2 w-40 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-800 hover:text-gray-50 transition ease-in-out duration-300">Create
                 Post</button>
 
             <button
-                class="flex items-center justify-center p-3 mt-2 w-40 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300">
+                class="flex items-center justify-center p-3 mt-2 w-40 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-800 hover:text-gray-50 transition ease-in-out duration-300">
                 Save
             </button>
         </section>

@@ -9,20 +9,22 @@
         <div>
             <label for="email" class="block text-sm text-blue-700 font-bold">Email</label>
             <input id="email" name="email" type="email" placeholder="email@email.com"
-                class="w-full rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200"
+                class="w-full border-gray-300 text-gray-900 text-sm rounded-lg  focus:border-blue-500
+                shadow-md border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none transition ease-in-out duration-200"
                 autocomplete="off">
         </div>
 
         <div>
             <label for="senha" class="block text-sm text-blue-700 font-bold">Senha</label>
             <input id="senha" name="senha" type="password" placeholder="*******"
-                class="w-full rounded-md shadow-md bg-gray-100 border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none p-2 transition ease-in-out duration-200"
+                class="w-full border-gray-300 text-gray-900 text-sm rounded-lg  focus:border-blue-500
+                shadow-md border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none transition ease-in-out duration-200"
                 autocomplete="off">
         </div>
 
         <div>
             <button onclick="loginAdmin()"
-            class="shadow bg-blue-500 p-2 rounded-md transition  hover:bg-indigo-500 duration-300 text-white w-full">Login</button>
+            class="shadow bg-blue-500 p-2 rounded-md transition  hover:bg-indigo-800 duration-300 text-white w-full">Login</button>
         </div>
 
         <div class="flex flex-col">

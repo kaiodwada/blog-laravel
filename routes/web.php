@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EditorController;
-
+use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +37,8 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/editors/create', [EditorController::class, 'create'])->name('editors-create');
     Route::post('/editors', [EditorController::class, 'store'])->name('editors-store');
     Route::put('/editors/{id}/edit', [EditorController::class, 'edit'])->name('editors-edit');
+
+    Route::get('/settings', [SettingController::class, 'index'])->name('settings');
 
     Route::get('/editors/status', [EditorController::class, 'status'])->name('editors-status');
 });
