@@ -38,7 +38,8 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/editors', [EditorController::class, 'index'])->name('editors-index');
     Route::get('/editors/create', [EditorController::class, 'create'])->name('editors-create');
     Route::post('/editors', [EditorController::class, 'store'])->name('editors-store');
-    Route::put('/editors/{id}/edit', [EditorController::class, 'edit'])->name('editors-edit');
+    Route::get('/editors/{editor}/edit', [EditorController::class, 'edit'])->name('editors-edit');
+    Route::put('/editors/{editor}', [EditorController::class, 'edit'])->name('editors-update');
 
     Route::get('/settings', [SettingController::class, 'index'])->name('settings');
 

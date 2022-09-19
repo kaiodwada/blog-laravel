@@ -5,8 +5,8 @@
 @section('content-dashboard')
 
     <section class="container flex items-center ml-80 justify-start py-20">
-        <div class="w-90 h-90 shadow-md rounded-md">
-            <h1 class="text-2xl text-gray-800 font-bold mb-3">Todos os posts</h1>
+        <div class="w-90 h-90 shadow-md rounded-md bg-gray-800 border-gray-700">
+            <h1 class="text-2xl text-gray-100 font-bold mb-3">Todos os posts</h1>
             <table class="table table-striped bg-gray-50 shadow-md">
                 <thead class="border-b border-gray-300">
                     <tr>

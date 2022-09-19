@@ -53,9 +53,11 @@ class EditorController extends Controller
         return redirect()->route('editors-create');
     }
 
-    public function edit()
+    public function edit(Editor $editor)
     {
-
+        return view('dashboard.editors-edit', [
+            'editor' => $editor,
+        ]);
     }
 
     public function status(Request $request)

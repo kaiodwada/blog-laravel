@@ -4,14 +4,13 @@
 
 @section('content-dashboard')
     <section class="container flex items-center ml-80 justify-start py-20">
-        <div class="space-y-4">
-            <h1 class="text-2xl text-gray-700 font-semibold">Adicionar categorias</h1>
+        <div class="space-y-4 rounded-lg border  shadow-md sm:p-6 md:p-8 bg-gray-800 border-gray-700">
+            <h1 class="text-2xl text-gray-100 font-semibold">Adicionar categorias</h1>
             <form action="{{ route('category-store') }}" method="POST">
                 @csrf
                 <div class="mb-2">
                     <input id="name" name="name" type="text" placeholder="Nome da Categoria"
-                        class="p-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:border-blue-500  w-full
-                        shadow-md border-gray m-1 focus:ring-blue-800 focus:ring-opacity-20 focus:ring-2 placeholder:italic focus:outline-none transition ease-in-out duration-200"
+                        class="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
                         autocomplete="off">
 
                     @error('name')
@@ -22,14 +21,14 @@
 
                 <div>
                     <select name="status" id="status"
-                        class="p-3 w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg shadow-md border-gray m-1">
+                        class="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white">
                         <option value="1">Ativo</option>
                         <option value="0">Inativo</option>
                     </select>
                 </div>
                 <div>
                     <button type="submit"
-                        class="flex items-center justify-center p-2 mt-2 ml-2 w-28 h-10 border border-gray-800 font-semibold  rounded-lg text-gray-700 hover:bg-gray-800 hover:text-gray-50 transition ease-in-out duration-300">
+                        class="py-2.5 px-5 w-full mt-3  text-sm font-medium  focus:outline-none  rounded-lg border  hover:text-gray-100 focus:z-10 focus:ring-4  focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 dhover:text-white hover:bg-gray-700">
                         Adicionar</button>
                 </div>
             </form>
