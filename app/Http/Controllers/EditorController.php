@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AdminEditRequest;
 use App\Http\Requests\StoreEditorRequest;
 use App\Models\Editor;
 use Illuminate\Http\Request;
@@ -58,6 +59,29 @@ class EditorController extends Controller
         return view('dashboard.editors-edit', [
             'editor' => $editor,
         ]);
+    }
+
+    public function update(Editor $editor, AdminEditRequest $request)
+    {
+        $input = $request->validated();
+        $editor->fill($input);
+        $editor->save();
+        return redirect()->route('editors-index');
+    }
+
+    public function changeStatus(Editor $editor, StoreEditorRequest $request)
+    {
+        $input = $request->validated();
+
+        if ($input['status'] == 0) {
+            $input['status'] = 1;
+        }else{
+            $input['status'] = 0;
+        }
+
+        $editor->fill($input);
+        $editor->save();
+        return redirect()->route('editors-index');
     }
 
     public function status(Request $request)

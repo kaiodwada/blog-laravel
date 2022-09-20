@@ -50,13 +50,28 @@
                                 <td class="py-4 px-6">
                                     <a href="{{ route('editors-edit', $editor->id) }}"
                                         class="p-1 font-semibold  rounded-lg text-gray-100 hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Atribuições</a>
-                                    @if ($editor->status === 0)
-                                        <button data-modal-toggle="statusModal"
+
+                                    <form enctype="multipart/form-data" action="{{ route('editors-changeStatus', $editor->id) }}" method="POST">
+                                        @csrf
+                                        @method('put')
+
+                                        <input type="number" name="status" value="{{ $editor->status }}" hidden readonly>
+                                        <input type="text" name="name"  value="{{ $editor->name }}" hidden readonly>
+                                        <input type="text" name="gender"  value="{{ $editor->gender }}" hidden readonly>
+                                        <input type="date" name="age" value="{{ $editor->age }}" hidden readonly>
+                                        <input type="email" name="email" value="{{ $editor->email }}" hidden readonly>
+                                        <input type="password" name="password"  value="{{ $editor->password }}" hidden readonly>
+                                        <input type="number" name="level" value="{{ $editor->level }}" hidden readonly>
+                                        <input type="file" name="image" value="{{ $editor->image }}" hidden readonly>
+
+                                        @if ($editor->status === 0)
+                                        <button type="submit"
                                             class="p-1  font-semibold  rounded-lg text-gray-100 hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Ativar</button>
                                     @else
-                                        <button data-modal-toggle="statusModal"
+                                        <button type="submit"
                                             class="p-1  font-semibold  rounded-lg text-gray-100 hover:text-gray-700 hover:bg-gray-100 transition ease-in-out duration-300 text-center">Desativar</button>
                                     @endif
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

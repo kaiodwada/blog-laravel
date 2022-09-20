@@ -31,7 +31,6 @@ class CategoryController extends Controller
 
         }else{
             $input['status'] = 0;
-
         }
         $category->fill($input);
         $category->save();
