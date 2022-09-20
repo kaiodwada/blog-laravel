@@ -3,15 +3,17 @@
 @section('title-adm', 'Dados do editor')
 
 @section('content-dashboard')
+
     <div class="container flex items-center ml-80 justify-start mt-3">
-        <a href="{{ route('editors-index') }}" type="button" class="rounded-full border focus:ring-4 focus:outline-none  font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 border-gray-600 text-gray-400 hover:text-white hover:bg-gray-600 focus:ring-gray-800">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+        <a href="{{ route('editors-index') }}" type="button" class="rounded-full border focus:ring-4 focus:outline-none   px-3 py-3 text-center mr-2 mb-2 border-gray-600 text-gray-400 hover:text-white hover:bg-gray-600 focus:ring-gray-800">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+              </svg>
 
         </a>
     </div>
 
-
-    <section class="container flex items-center ml-80 justify-start py-20">
+    <section class="container flex items-center ml-80 justify-start py-10">
 
         <div class="p-4 w-1/2  max-w rounded-lg border  shadow-md sm:p-6 md:p-8 bg-gray-800 border-gray-700">
 

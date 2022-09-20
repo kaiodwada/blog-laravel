@@ -1102,6 +1102,9 @@ input:checked + .toggle-bg {
 .m-1 {
   margin: 0.25rem;
 }
+.m-5 {
+  margin: 1.25rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1164,6 +1167,9 @@ input:checked + .toggle-bg {
 .mt-1 {
   margin-top: 0.25rem;
 }
+.-mb-10 {
+  margin-bottom: -2.5rem;
+}
 .ml-4 {
   margin-left: 1rem;
 }
@@ -1224,11 +1230,11 @@ input:checked + .toggle-bg {
 .h-10 {
   height: 2.5rem;
 }
-.h-5 {
-  height: 1.25rem;
-}
 .h-6 {
   height: 1.5rem;
+}
+.h-5 {
+  height: 1.25rem;
 }
 .h-modal {
   height: calc(100% - 2rem);
@@ -1257,17 +1263,20 @@ input:checked + .toggle-bg {
 .w-11 {
   width: 2.75rem;
 }
-.w-5 {
-  width: 1.25rem;
+.w-6 {
+  width: 1.5rem;
 }
 .w-1\/2 {
   width: 50%;
 }
+.w-10 {
+  width: 2.5rem;
+}
 .w-\[300px\] {
   width: 300px;
 }
-.w-6 {
-  width: 1.5rem;
+.w-5 {
+  width: 1.25rem;
 }
 .w-4\/5 {
   width: 80%;
@@ -1692,13 +1701,13 @@ input:checked + .toggle-bg {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .py-8 {
   padding-top: 2rem;
@@ -1731,6 +1740,9 @@ input:checked + .toggle-bg {
 }
 .text-center {
   text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 .text-xs {
   font-size: 0.75rem;
@@ -2291,6 +2303,10 @@ input:checked + .toggle-bg {
 
   .sm\:justify-between {
     justify-content: space-between;
+  }
+
+  .sm\:rounded-lg {
+    border-radius: 0.5rem;
   }
 
   .sm\:border-l-2 {

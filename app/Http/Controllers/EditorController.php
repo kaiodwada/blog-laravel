@@ -80,7 +80,7 @@ class EditorController extends Controller
         }
 
         $editor->fill($input);
-        $editor->save();
+        $editor->update();
         return redirect()->route('editors-index');
     }
 

@@ -112,7 +112,7 @@
                     </svg>
 
                     <div class="flex justify-between w-full items-center" onclick="dropDown()">
-                        <span class="text-[15px] ml-4 text-gray-200">Knowledge</span>
+                        <span class="text-[15px] ml-4 text-gray-200">Post</span>
                         <span class="text-sm rotate-180" id="arrow">
 
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
@@ -127,18 +127,18 @@
                 </section>
 
                 <div class="leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto" id="submenu">
-                    <a href="{{ route('create-post') }}"
+                    <a href="{{ route('post-create') }}"
                         class="flex items-center cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">
-                        <h1 class="mr-1">Knowledge poster</h1>
+                        <h1 class="mr-1">Post builder</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </a>
-                    <a href="{{ route('knowledge-index') }}"
+                    <a href="{{ route('post-index') }}"
                         class="flex items-center cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">
-                        <h1 class="mr-1">Knowledge center</h1>
+                        <h1 class="mr-1">Post analisys</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -146,6 +146,14 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
+                    </a>
+                    <a href="{{ route('post-published') }}"
+                        class="flex items-center cursor-pointer p-2 hover:bg-gray-700 rounded-md mt-1">
+                        <h1 class="mr-1">Published posts</h1>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                          </svg>
+
                     </a>
                 </div>
 

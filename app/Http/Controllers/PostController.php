@@ -10,27 +10,49 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('dashboard.knowledge');
+        $posts = Post::where('status', 0)->paginate(10);
+        return view('dashboard.posts', [
+            'posts' => $posts,
+        ]);
     }
 
-   public function store(StorePostRequest $request)
-   {
-    $input = $request->validated();
-    Post::create($input);
-    return redirect()->route('create-post');
-   }
+    public function store(StorePostRequest $request)
+    {
+        $input = $request->validated();
+        Post::create($input);
+        return redirect()->route('post-create');
+    }
 
-   public function create()
-   {
+    public function published()
+    {
+        $posts = Post::where('status', 1)->paginate(10);
+        return view('dashboard.published-posts', [
+            'posts' => $posts,
+        ]);
+    }
+
+    public function edit(Post $post)
+    {
+        return view('dashboard.post-edit', [
+            'post' => $post,
+        ]);
+    }
+
+    public function update()
+    {
+    }
+
+    public function create()
+    {
         $categories = Category::all();
 
-       return view('dashboard.create-post',
-       ['categories' => $categories]);
-   }
+        return view(
+            'dashboard.create-post',
+            ['categories' => $categories]
+        );
+    }
 
-   public function delete()
-   {
-
-   }
-
+    public function delete()
+    {
+    }
 }

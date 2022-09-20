@@ -33,7 +33,7 @@ class CategoryController extends Controller
             $input['status'] = 0;
         }
         $category->fill($input);
-        $category->save();
+        $category->update();
         return redirect()->route('categories');
     }
 }

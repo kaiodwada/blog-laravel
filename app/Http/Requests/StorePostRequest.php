@@ -24,9 +24,13 @@ class StorePostRequest extends FormRequest
     public function rules()
     {
         return [
+            'author' => 'nullable',
             'title' => 'required',
+            'media' => 'nullable',
+            'content' => 'required',
             'category_id' => 'required|integer',
-            'content' => 'required'
+            'status' => 'required|boolean',
+            'version' => 'required',
         ];
     }
 }
