@@ -36,15 +36,8 @@
                                     {{ $editor->email }}
                                 </td>
                                 <td class="py-4 px-6" id="level">
-                                    @if ($editor->level === 4)
-                                        Editor
-                                    @elseif ($editor->level === 3)
-                                        Gerente
-                                    @elseif ($editor->level === 2)
-                                        Aprovador
-                                    @elseif($editor->level === 1)
-                                        Administrador
-                                    @endif
+                                   {{ $editor->level }}
+
                                 </td>
 
                                 <td class="py-4 px-6">

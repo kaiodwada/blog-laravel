@@ -18,8 +18,8 @@ class EditorFactory extends Factory
             'age' => $this->faker->date(),
             'email' => $this->faker->email(),
             'password' => $this->faker->md5(),
-            'gender' => $this->faker->randomElement($array = array ('masculino', 'feminino', 'não-binário')),
-            'level' =>$this->faker->randomDigit(),
+            'gender' => $this->faker->randomElement(array ('Masculino', 'Feminino', 'Não-binário')),
+            'level' =>$this->faker->randomElement(array ('Administrador', 'Gerente', 'Aprovador', 'Editor')),
             'image' => $this->faker->imageUrl(),
             'status' => $this->faker->boolean(),
         ];

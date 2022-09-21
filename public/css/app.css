@@ -1078,14 +1078,14 @@ input:checked + .toggle-bg {
 .bottom-\[60px\] {
   bottom: 60px;
 }
+.z-20 {
+  z-index: 20;
+}
 .z-50 {
   z-index: 50;
 }
 .z-0 {
   z-index: 0;
-}
-.z-20 {
-  z-index: 20;
 }
 .z-10 {
   z-index: 10;
@@ -1096,14 +1096,14 @@ input:checked + .toggle-bg {
 .z-30 {
   z-index: 30;
 }
+.order-1 {
+  order: 1;
+}
 .-m-4 {
   margin: -1rem;
 }
 .m-1 {
   margin: 0.25rem;
-}
-.m-5 {
-  margin: 1.25rem;
 }
 .mx-auto {
   margin-left: auto;
@@ -1184,6 +1184,9 @@ input:checked + .toggle-bg {
 }
 .mt-16 {
   margin-top: 4rem;
+}
+.mt-0 {
+  margin-top: 0px;
 }
 .ml-auto {
   margin-left: auto;
@@ -1269,9 +1272,6 @@ input:checked + .toggle-bg {
 .w-1\/2 {
   width: 50%;
 }
-.w-10 {
-  width: 2.5rem;
-}
 .w-\[300px\] {
   width: 300px;
 }
@@ -1354,6 +1354,9 @@ input:checked + .toggle-bg {
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
+.flex-row {
+  flex-direction: row;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -1410,6 +1413,11 @@ input:checked + .toggle-bg {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1732,6 +1740,12 @@ input:checked + .toggle-bg {
 .pt-10 {
   padding-top: 2.5rem;
 }
+.pr-4 {
+  padding-right: 1rem;
+}
+.pl-3 {
+  padding-left: 0.75rem;
+}
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -1743,6 +1757,9 @@ input:checked + .toggle-bg {
 }
 .text-right {
   text-align: right;
+}
+.text-end {
+  text-align: end;
 }
 .text-xs {
   font-size: 0.75rem;
@@ -2017,6 +2034,9 @@ input:checked + .toggle-bg {
 .hover\:bg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+.hover\:bg-transparent:hover {
+  background-color: transparent;
 }
 .hover\:bg-red-800:hover {
   --tw-bg-opacity: 1;
@@ -2327,6 +2347,11 @@ input:checked + .toggle-bg {
     padding-bottom: 0.5rem;
   }
 
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .sm\:pl-4 {
     padding-left: 1rem;
   }
@@ -2379,6 +2404,19 @@ input:checked + .toggle-bg {
 
   .md\:p-8 {
     padding: 2rem;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
+  }
+
+  .md\:hover\:bg-transparent:hover {
+    background-color: transparent;
+  }
+
+  .md\:hover\:text-blue-700:hover {
+    --tw-text-opacity: 1;
+    color: rgb(26 86 219 / var(--tw-text-opacity));
   }
 }
 @media (min-width: 1024px) {

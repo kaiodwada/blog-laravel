@@ -30,7 +30,10 @@ class StorePostRequest extends FormRequest
             'content' => 'required',
             'category_id' => 'required|integer',
             'status' => 'required|boolean',
+            'disapproved' => 'nullable',
+            'why-failed' => 'nullable',
             'version' => 'required',
+            'excerpt' => 'nullable'
         ];
     }
 }

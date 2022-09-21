@@ -15,14 +15,20 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('slug', 255);
             $table->string('author', 95)->nullable();
             $table->string('title', 200);
             $table->longText('content');
             $table->string('media', 255)->nullable();
-            $table->unsignedBigInteger('category_id');
+            //$table->unsignedBigInteger('category_id');
+            $table->integer('category_id');
             $table->boolean('status');
+            $table->boolean('disapproved')->nullable();
+            $table->string('why-failed', 255)->nullable();
             $table->string('version', 80);
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->mediumText('excerpt')->nullable();
+            //$table->foreign('category_id')->references('id')->on('categories');
+            //$table->foreign('author_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }
