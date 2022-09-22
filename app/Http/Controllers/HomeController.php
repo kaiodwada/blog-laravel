@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use PhpParser\Node\Expr\FuncCall;
+use App\Models\Category;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('home');
+        $posts = Post::all();
+        return view('home', ['posts' => $posts]);
     }
     public function login()
     {
         return view('login');
     }
+
 }

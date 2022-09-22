@@ -37,7 +37,7 @@ class StoreEditorRequest extends FormRequest
             'email' =>  'required|email',
             'password' =>  'required|min:8',
             'gender' =>  'required|string',
-            'level' => 'required|integer',
+            'role' => 'required|integer',
             'status' => 'required|boolean',
             'image' =>  'file|nullable'
         ];

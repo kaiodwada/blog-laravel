@@ -73,15 +73,19 @@ class EditorController extends Controller
     {
         $input = $request->validated();
 
-        if ($input['status'] == 0) {
+        /* if ($input['status'] == 0) {
             $input['status'] = 1;
         }else{
             $input['status'] = 0;
-        }
-
-        $editor->fill($input);
-        $editor->update();
-        return redirect()->route('editors-index');
+        } */
+        dd($input);
+        /*  try {
+            $editor->fill($input);
+            $editor->update();
+            return redirect()->route('editors-index');
+        } catch (\Throwable $th) {
+            throw $th;
+        } */
     }
 
     public function status(Request $request)

@@ -20,7 +20,7 @@ class CreateEditorsTable extends Migration
             $table->string('email', 100);
             $table->string('password', 100);
             $table->string('gender', 20);
-            $table->string('level', 150);
+            $table->string('role', 150);
             $table->string('image', 255)->nullable();
             $table->boolean('status');
             $table->timestamps();

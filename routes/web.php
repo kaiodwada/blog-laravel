@@ -29,7 +29,7 @@ Route::prefix('dashboard')->group(function () {
 
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
     Route::post('/category/store', [CategoryController::class, 'store'])->name('category-store');
-    Route::put('/categories/{category}/status', [CategoryController::class, 'changeStatus'])->name('category-changeStatus');
+    Route::put('/categories/{category}/changeStatus', [CategoryController::class, 'changeStatus'])->name('category-changeStatus');
 
     Route::get('/post', [PostController::class, 'index'])->name('post-index');
     Route::get('/post/create', [PostController::class, 'create'])->name('post-create');
@@ -42,7 +42,7 @@ Route::prefix('dashboard')->group(function () {
     Route::post('/editors', [EditorController::class, 'store'])->name('editors-store');
     Route::get('/editors/{editor}/edit', [EditorController::class, 'edit'])->name('editors-edit');
     Route::put('/editors/{editor}', [EditorController::class, 'update'])->name('editors-update');
-    Route::put('/editors/{editor}/status', [EditorController::class, 'changeStatus'])->name('editors-changeStatus');
+    Route::put('/editors/{editor}/changeStatus', [EditorController::class, 'changeStatus'])->name('editors-changeStatus');
 
     Route::get('/settings', [SettingController::class, 'index'])->name('settings');
 

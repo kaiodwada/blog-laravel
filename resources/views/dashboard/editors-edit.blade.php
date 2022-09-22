@@ -54,10 +54,10 @@
                 </div>
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Nível de Acesso</label>
-                    <select name="level" id="level"
+                    <select name="role" id="role"
                         class="border-gray-500 placeholder-gray-400 text-white bg-gray-600 border 0 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                        <option value="{{ $editor->level }}">
-                         {{$editor->level}}
+                        <option value="{{ $editor->role }}">
+                         {{$editor->role}}
                         </option>
                         <option value="4">Editor</option>
                         <option value="3">Gerente</option>
