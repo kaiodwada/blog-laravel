@@ -50,14 +50,14 @@
             @enderror
             </div>
             <div>
-                <select name="level" id="level" class="border-gray-500 placeholder-gray-400 text-gray-400 bg-gray-600 border 0 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                    <option value="" selected>Selecione a função</option>
+                <select name="role" id="role" class="border-gray-500 placeholder-gray-400 text-gray-400 bg-gray-600 border 0 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option value="">Selecione a função</option>
                     <option value="Editor">Editor</option>
                     <option value="Gerente">Gerente</option>
                     <option value="Aprovador">Aprovador</option>
                     <option value="Administrador">Administrador</option>
                 </select>
-            @error('level')
+            @error('role')
                 <div class="bg-red-800 text-gray-50 rounded-md px-1 mx-3">{{ $message }}</div>
             @enderror
             </div>

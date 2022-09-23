@@ -10,6 +10,6 @@ class Editor extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'age', 'email', 'password', 'gender', 'level', 'status', 'image'
+        'name', 'age', 'email', 'password', 'gender', 'role', 'status', 'image'
     ];
 }

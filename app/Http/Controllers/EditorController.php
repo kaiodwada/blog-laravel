@@ -30,19 +30,18 @@ class EditorController extends Controller
         $input = $request->validated();
 
         if (empty($input['image'])) {
-            $rand = rand(1,4);
+            $rand = rand(1, 4);
             $gender = array("m" => "0", "w" => "1");
             $sort = array_rand($gender, 1);
             if ($input['gender'] === 'masculino') {
-                $collection = "public/default/m-".$rand.".png";
-            }elseif($input['gender'] === 'feminino'){
-                $collection = "public/default/w-".$rand.".png";
-            }else{
-                $collection = "public/default/".$sort."-".$rand.".png";
+                $collection = "public/default/m-" . $rand . ".png";
+            } elseif ($input['gender'] === 'feminino') {
+                $collection = "public/default/w-" . $rand . ".png";
+            } else {
+                $collection = "public/default/" . $sort . "-" . $rand . ".png";
             }
             $input['image'] = $collection;
-
-        }else{
+        } else {
             if ($input['image']->isValid()) {
                 $file = $input['image'];
                 $path = $file->store('public/avatar/');
@@ -72,24 +71,14 @@ class EditorController extends Controller
     public function changeStatus(Editor $editor, StoreEditorRequest $request)
     {
         $input = $request->validated();
-
-        /* if ($input['status'] == 0) {
+        $editor->fill($input);
+        if ($input['status'] == 0) {
             $input['status'] = 1;
-        }else{
+        } else {
             $input['status'] = 0;
-        } */
-        dd($input);
-        /*  try {
-            $editor->fill($input);
-            $editor->update();
-            return redirect()->route('editors-index');
-        } catch (\Throwable $th) {
-            throw $th;
-        } */
-    }
+        }
 
-    public function status(Request $request)
-    {
-        dd($request->request);
+        $editor->update();
+        return redirect()->route('editors-index');
     }
 }

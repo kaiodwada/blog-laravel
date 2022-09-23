@@ -71,6 +71,7 @@
                         @endforeach
                     </tbody>
                 </table>
+
             </div>
             <div>
                 <ul class="items-center justify-center  p-2  text-white rounded-b-md">
